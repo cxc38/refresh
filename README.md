@@ -2,7 +2,7 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
+- Preview: https://main--refresh--cxc38.aem.page/
 - Live: https://main--{repo}--{owner}.aem.live/
 
 ## Installation
