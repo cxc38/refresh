@@ -1,6 +1,7 @@
 {
   "mappings": [
     "/content/refresh/uk/en/:/",
+    "/content/refresh/us/en/:/us/en/",
     "/content/refresh/configuration:/.helix/config.json",
     "/content/refresh/metadata:/metadata.json"
   ]
