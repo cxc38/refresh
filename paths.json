@@ -6,5 +6,5 @@
     "/content/refresh/configuration:/.helix/config.json",
     "/content/refresh/metadata:/metadata.json"
   ],
-  "includes": ["/content/refresh/", "/content/dam/"]
+  "includes": ["/content/refresh", "/content/dam/refresh"]
 }
