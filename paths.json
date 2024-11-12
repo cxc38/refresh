@@ -5,6 +5,9 @@
     "/content/refresh/us/es/:/us/es/",
     "/content/refresh/configuration:/.helix/config.json",
     "/content/refresh/metadata:/metadata.json",
+    "/content/refresh/redirects:/redirects.json",
+    "/content/refresh/global:/config.json",
+    "/content/refresh/placeholders:/placeholders.json",
     "/content/dam/refresh/:/refresh/"
   ],
   "includes": ["/content/refresh", "/content/dam/refresh"]
