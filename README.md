@@ -2,8 +2,16 @@
 Your project's description...
 
 ## Environments
+
+### EDS Site
 - Preview: https://main--refresh--cxc38.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Live: https://main--refresh--cxc38.aem.live/
+
+### AEM Author (Site)
+    https://author-p134211-e1317444.adobeaemcloud.com/content/refresh
+
+### Github
+This one.
 
 ## Installation
 
@@ -17,9 +25,21 @@ npm i
 npm run lint
 ```
 
+
+## Proxying/Preview
+
+```sh
+aem up
+```
+or
+
+```sh
+aem up --url https://main--refresh--cxc38.aem.page/
+```
+
 ## Local development
 
-1. Create a new repository based on the `aem-boilerplate` template and add a mountpoint in the `fstab.yaml`
+1. Create a new repository based on the `aem-boilerplate-xwalk` template and add a mountpoint in the `fstab.yaml`
 1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
