@@ -10,15 +10,29 @@
       },
       {
         "component": "text-input",
-        "label": "Hidden text field",
-        "name": "hidden-text",
+        "label": "Hidden text field - 1",
+        "name": "hidden-text-1",
+        "valueType": "string",
+        "condition": { "===": [{"var" : "reveal"}, true] }
+      },
+      {
+        "component": "text-input",
+        "label": "Hidden text field - 2",
+        "name": "hidden-text-2",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
         "component": "reference",
-        "name": "image",
-        "label": "Image",
+        "name": "image-1",
+        "label": "Image-1",
+        "multi": false,
+        "condition": { "===": [{"var" : "reveal"}, false] }
+      },
+      {
+        "component": "reference",
+        "name": "image-2",
+        "label": "Image-2",
         "multi": false,
         "condition": { "===": [{"var" : "reveal"}, false] }
       }
