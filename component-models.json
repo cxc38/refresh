@@ -17,15 +17,15 @@
       },
       {
         "component": "text-input",
-        "label": "Hidden text field - 3",
-        "name": "hidden-text-1",
+        "label": "Hidden text field - 2",
+        "name": "hidden-text-2",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
         "component": "text-input",
-        "label": "Hidden text field - 2",
-        "name": "hidden-text-1",
+        "label": "Hidden text field - 3",
+        "name": "hidden-text-3",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
