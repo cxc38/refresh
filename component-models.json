@@ -14,6 +14,13 @@
         "name": "hidden-text",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "condition": { "===": [{"var" : "reveal"}, false] }
       }
     ]
   },
