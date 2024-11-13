@@ -16,7 +16,8 @@
       "video",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "conditionally-revealed-component"
     ]
   },
   {
