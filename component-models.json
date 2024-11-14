@@ -26,7 +26,8 @@
         "component": "columns",
         "label": "Container for multi-fields",
         "name": "column-container",
-        "condition": { "===": [{"var" : "reveal"}, true] }
+        "condition": { "===": [{"var" : "reveal"}, true] },
+        "multi": true
       },
       {
         "component": "reference",
