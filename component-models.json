@@ -1,5 +1,153 @@
 [
   {
+    "id": "hero-intro",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1",
+        "label": "Spec1",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec1Value",
+        "label": "Spec1 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2",
+        "label": "Spec2",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec2Value",
+        "label": "Spec2 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3",
+        "label": "Spec3",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec3Value",
+        "label": "Spec3 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4",
+        "label": "Spec4",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "spec4Value",
+        "label": "Spec4 Value",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "name": "imageURL",
+        "label": "ImageURL",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Image Alt Label",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "tertiary",
+            "value": "tertiary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "conditionally-revealed-component",
     "fields": [
       {
@@ -21,13 +169,6 @@
         "name": "hidden-text-2",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
-      },
-      {
-        "component": "columns",
-        "label": "Container for multi-fields",
-        "name": "column-container",
-        "condition": { "===": [{"var" : "reveal"}, true] },
-        "multi": true
       },
       {
         "component": "reference",
@@ -118,7 +259,7 @@
     "id": "button",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "name": "link",
         "label": "Link"
       },
@@ -211,7 +352,7 @@
     "id": "video",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "valueType": "string",
         "name": "uri",
         "label": "Video"
@@ -254,7 +395,7 @@
     "id": "fragment",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "name": "reference",
         "label": "Reference"
       }

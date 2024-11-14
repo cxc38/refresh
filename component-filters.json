@@ -17,6 +17,7 @@
       "cards",
       "columns",
       "fragment",
+      "hero-intro",
       "conditionally-revealed-component"
     ]
   },
