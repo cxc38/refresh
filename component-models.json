@@ -31,15 +31,28 @@
       },
       {
         "component": "reference",
-        "name": "theImage",
-        "label": "theImage URL",
+        "name": "theImage1",
+        "label": "theImage-1 URL",
         "multi": false,
         "condition": { "===": [{"var" : "reveal"}, false] }
       },
       {
         "component": "text",
-        "name": "theImageAlt",
-        "label": "theImage Alt Text",
+        "name": "theImage1Alt",
+        "label": "theImage-1 Alt Text",
+        "condition": { "===": [{"var" : "reveal"}, false] }
+      },
+      {
+        "component": "reference",
+        "name": "theImage2",
+        "label": "theImage-2 URL",
+        "multi": false,
+        "condition": { "===": [{"var" : "reveal"}, false] }
+      },
+      {
+        "component": "text",
+        "name": "theImage2Alt",
+        "label": "theImage-2 Alt Text",
         "condition": { "===": [{"var" : "reveal"}, false] }
       }
     ]
