@@ -31,16 +31,15 @@
       },
       {
         "component": "reference",
-        "name": "image-1",
-        "label": "Image-1",
+        "name": "theImage",
+        "label": "theImage URL",
         "multi": false,
         "condition": { "===": [{"var" : "reveal"}, false] }
       },
       {
-        "component": "reference",
-        "name": "image-2",
-        "label": "Image-2",
-        "multi": false,
+        "component": "text",
+        "name": "theImageAlt",
+        "label": "theImage Alt Text",
         "condition": { "===": [{"var" : "reveal"}, false] }
       }
     ]
