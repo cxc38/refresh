@@ -23,10 +23,9 @@
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
-        "component": "text-input",
-        "label": "Hidden text field - 3",
-        "name": "hidden-text-3",
-        "valueType": "string",
+        "component": "columns",
+        "label": "Container for multi-fields",
+        "name": "column-container",
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
