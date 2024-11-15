@@ -42,14 +42,14 @@
         "valueType": "boolean"
       },
       {
-        "component": "text-input",
+        "component": "text",
         "label": "Hidden text field - 1",
         "name": "hidden-text-1",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
-        "component": "columns",
+        "component": "image",
         "label": "Container for multi-fields",
         "name": "hidden-text-2",
         "condition": { "===": [{"var" : "reveal"}, true] }
