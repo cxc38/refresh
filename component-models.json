@@ -73,6 +73,7 @@
         "name": "container",
         "valueType": "string",
         "collapsible": true,
+        "multi": true,
         "condition": { "===": [{"var" : "reveal"}, true] },
         "fields": [
           {
