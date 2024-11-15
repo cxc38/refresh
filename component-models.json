@@ -74,7 +74,7 @@
         "valueType": "string",
         "collapsible": false,
         "condition": { "===": [{"var" : "reveal"}, true] },
-        "multi": true,
+        "multi": false,
         "fields": [
           {
             "component": "text-input",
