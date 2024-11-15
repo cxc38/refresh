@@ -72,15 +72,15 @@
         "label": "Container",
         "name": "container",
         "valueType": "string",
-        "collapsible": true,
+        "collapsible": false,
         "condition": { "===": [{"var" : "reveal"}, true] },
+        "multi": true,
         "fields": [
           {
             "component": "text-input",
             "label": "Simple Text 1",
             "name": "text",
-            "valueType": "string",
-            "multi": true
+            "valueType": "string"
           },
           {
             "component": "text-input",
