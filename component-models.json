@@ -49,8 +49,8 @@
         "condition": { "===": [{"var" : "reveal"}, true] }
       },
       {
-        "component": "text-input",
-        "label": "Hidden text field - 2",
+        "component": "columns",
+        "label": "Container for multi-fields",
         "name": "hidden-text-2",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
