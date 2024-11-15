@@ -42,7 +42,7 @@
         "valueType": "boolean"
       },
       {
-        "component": "card",
+        "component": "myblocks",
         "label": "Container for multi-fields",
         "name": "hidden-text-2",
         "condition": { "===": [{"var" : "reveal"}, true] }
