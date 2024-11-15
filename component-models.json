@@ -49,7 +49,7 @@
       },
       {
         "component": "text",
-        "label": "Hidden text field - 1",
+        "label": "Hidden text field",
         "name": "hidden-text-1",
         "valueType": "string",
         "condition": { "===": [{"var" : "reveal"}, true] }
