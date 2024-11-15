@@ -33,6 +33,32 @@
     ]
   },
   {
+    "id": "container",
+    "fields": [
+      {
+        "component": "container",
+        "label": "Container",
+        "name": "container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text-input",
+            "label": "Simple Text 1",
+            "name": "text",
+            "valueType": "string"
+          },
+          {
+            "component": "text-input",
+            "label": "Simple Text 2",
+            "name": "text2",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "conditionally-revealed-component",
     "fields": [
       {
