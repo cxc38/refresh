@@ -1,34 +1,14 @@
 [
   {
-    "id": "hero-intro",
+    "id": "page-metadata",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "spec1",
-        "label": "Spec1",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec1Value",
-        "label": "Spec1 Value",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec2",
-        "label": "Spec2",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "spec2Value",
-        "label": "Spec2 Value",
-        "value": ""
+        "name": "page-metadata",
+        "label": "Page Metadata",
+        "placeholder": "name:value",
+        "multi": true
       }
     ]
   },
