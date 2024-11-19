@@ -3,6 +3,7 @@
     "/content/refresh/uk/en/:/",
     "/content/refresh/us/en/:/us/en/",
     "/content/refresh/us/es/:/us/es/",
+    "/content/refresh/us/es/configuration:/us/es/config.json",
     "/content/refresh/configuration:/.helix/config.json",
     "/content/refresh/metadata:/metadata.json",
     "/content/refresh/redirects:/redirects.json",

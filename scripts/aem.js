@@ -234,6 +234,21 @@ async function loadCSS(href) {
   });
 }
 
+async function loadFonts() {
+  // load local version of https://use.typekit.net/pee8cij.css
+  await loadCSS(('styles/fonts.css'));
+  if (document.fonts?.load) {
+    const promises = [
+      document.fonts.load('300 14px museo-sans', 'a'),
+      document.fonts.load('500 16px museo-sans', 'a'),
+      document.fonts.load('700 14px museo-sans', 'a'),
+      document.fonts.load('400 36px miller-display', 'a'),
+    ];
+    return Promise.allSettled(promises);
+  }
+  return true;
+}
+
 /**
  * Loads a non module JS file.
  * @param {string} src URL to the JS file
@@ -333,6 +348,9 @@ function decorateTemplateAndTheme() {
   if (template) addClasses(document.body, template);
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, theme);
+
+  const themeCSS = getMetadata('css');
+  if (themeCSS) loadCSS(themeCSS);
 }
 
 /**
@@ -719,6 +737,7 @@ export {
   getMetadata,
   loadBlock,
   loadCSS,
+  loadFonts,
   loadFooter,
   loadHeader,
   loadScript,
