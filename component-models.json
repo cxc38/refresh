@@ -13,6 +13,18 @@
     ]
   },
   {
+    "id": "experience-fragment",
+    "fields": [
+      {
+        "component": "aem-experience-fragment",
+        "valueType": "string",
+        "name": "experience-fragment",
+        "label": "experience-fragment",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "container",
     "fields": [
       {

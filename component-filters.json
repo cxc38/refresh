@@ -18,6 +18,7 @@
       "columns",
       "fragment",
       "page-metadata",
+      "experience-fragment",
       "conditionally-revealed-component"
     ]
   },

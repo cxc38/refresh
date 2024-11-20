@@ -8,7 +8,7 @@
     "/content/refresh/metadata:/metadata.json",
     "/content/refresh/us/es/metadata:/us/es/metadata.json",
     "/content/refresh/redirects:/redirects.json",
-    "/content/refresh/global:/config.json",
+    "/content/refresh/us/es/configuration:/usesconfig.json",
     "/content/refresh/placeholders:/placeholders.json",
     "/content/dam/refresh/:/refresh/"
   ],
