@@ -44,7 +44,7 @@ export async function loadContentFragment(path) {
 export default async function decorate(block) {
   const link = block.querySelector('a');
   const path = link ? link.getAttribute('href') : block.textContent.trim();
-  const fragment = await loadContentFragment('/content/dam' + path + '/jcr:content/data/master.json');
+  const fragment = await loadContentFragment(`https://author-p134211-e1317444.adobeaemcloud.com/content/dam${path}/jcr:content/data/master.json`);
   if (fragment) {
     const fragmentSection = fragment.querySelector(':scope .section');
     if (fragmentSection) {
