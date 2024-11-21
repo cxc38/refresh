@@ -20,6 +20,8 @@
         "valueType": "string",
         "name": "experience-fragment",
         "label": "experience-fragment",
+        "variationName": "experienceFragmentVariation",
+        "rootPath": "/content/refresh",
         "multi": false
       }
     ]
