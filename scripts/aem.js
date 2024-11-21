@@ -552,6 +552,26 @@ async function fetchPlaceholders(prefix = 'default') {
   return window.placeholders[`${prefix}`];
 }
 
+function updateSectionsStatus(main) {
+  const sections = [...main.querySelectorAll(':scope > div.section')];
+  for (let i = 0; i < sections.length; i += 1) {
+    const section = sections[i];
+    const status = section.dataset.sectionStatus;
+    if (status !== 'loaded') {
+      const loadingBlock = section.querySelector(
+        '.block[data-block-status="initialized"], .block[data-block-status="loading"]',
+      );
+      if (loadingBlock) {
+        section.dataset.sectionStatus = 'loading';
+        break;
+      } else {
+        section.dataset.sectionStatus = 'loaded';
+        section.style.display = null;
+      }
+    }
+  }
+}
+
 /**
  * Builds a block DOM Element from a two dimensional array, string, or object
  * @param {string} blockName name of the block
@@ -620,6 +640,19 @@ async function loadBlock(block) {
   return block;
 }
 
+/**
+ * Loads JS and CSS for all blocks in a container element.
+ * @param {Element} main The container element
+ */
+async function loadBlocks(main) {
+  const blocks = [...main.querySelectorAll('div.block')];
+  for (let i = 0; i < blocks.length; i += 1) {
+    const block = blocks[i];
+    // eslint-disable-next-line no-await-in-loop
+    await loadBlock(block);
+    updateSectionsStatus(main);
+  }
+}
 /**
  * Decorates a block.
  * @param {Element} block The block element
@@ -736,6 +769,7 @@ export {
   fetchPlaceholders,
   getMetadata,
   loadBlock,
+  loadBlocks,
   loadCSS,
   loadFonts,
   loadFooter,
