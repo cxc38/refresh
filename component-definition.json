@@ -159,6 +159,21 @@
           }
         },
         {
+          "title": "aem-content-picker",
+          "id": "aem-content-picker",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "aem-content-picker",
+                  "model": "aem-content-picker"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "experience-fragment",
           "id": "experience-fragment",
           "plugins": {

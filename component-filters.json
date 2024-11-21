@@ -19,6 +19,7 @@
       "fragment",
       "page-metadata",
       "experience-fragment",
+      "aem-content-picker",
       "conditionally-revealed-component"
     ]
   },

@@ -13,17 +13,18 @@
     ]
   },
   {
-    "id": "experience-fragment",
-    "fields": [
-      {
-        "component": "aem-experience-fragment",
-        "valueType": "string",
-        "name": "experience-fragment",
-        "label": "experience-fragment",
-        "rootPath": "/content/refresh"
-      }
-    ]
-  },
+  "id": "aem-content-picker",
+  "fields": [
+    {
+      "component": "aem-content",
+      "name": "reference",
+      "value": "",
+      "label": "AEM Content Picker",
+      "valueType": "string",
+      "rootPath": "/content/refresh"
+    }
+  ]
+},
   {
     "id": "container",
     "fields": [
