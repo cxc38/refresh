@@ -18,21 +18,20 @@ import {
  * @returns {HTMLElement} The root element of the fragment
  */
 export async function loadContentFragment(path) {
-  if (path && path.startsWith('/')) {
+  function genHtmlFromJson(jsonObject) {
+    const { title } = jsonObject.data.teaserModelByPath.item;
+    const descText = jsonObject.data.teaserModelByPath.item.description.plaintext;
+    // eslint-disable-next-line no-underscore-dangle
+    const imagePath = jsonObject.data.teaserModelByPath.item.teaserImage._publishUrl;
+    return `<h2>${title}</h2><p>${descText}</p><img src="${imagePath}" alt="Teaser Image">`;
+  }
+
+  if (path) {
     const resp = await fetch(`${path}`);
     if (resp.ok) {
+      const jsonObject = await resp.json();
       const main = document.createElement('main');
-      main.innerHTML = await resp.text();
-
-      // reset base path for media to fragment base
-      const resetAttributeBase = (tag, attr) => {
-        main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
-          elem[attr] = new URL(elem.getAttribute(attr), new URL(path, window.location)).href;
-        });
-      };
-      resetAttributeBase('img', 'src');
-      resetAttributeBase('source', 'srcset');
-
+      main.innerHTML = genHtmlFromJson(jsonObject);
       decorateMain(main);
       await loadSections(main);
       return main;
@@ -44,13 +43,8 @@ export async function loadContentFragment(path) {
 export default async function decorate(block) {
   const link = block.querySelector('a');
   const path = link ? link.getAttribute('href') : block.textContent.trim();
-  const fragment = await loadContentFragment(`https://author-p134211-e1317444.adobeaemcloud.com/content/dam${path}/jcr:content/data/master.json`);
+  const fragment = await loadContentFragment(`https://publish-p134211-e1317444.adobeaemcloud.com/graphql/execute.json/refresh/getTeaserByPath;apath=/content/dam${path}`);
   if (fragment) {
-    const fragmentSection = fragment.querySelector(':scope .section');
-    if (fragmentSection) {
-      block.classList.add(...fragmentSection.classList);
-      block.classList.remove('section');
-      block.replaceChildren(...fragmentSection.childNodes);
-    }
+    block.replaceChildren(...fragment.childNodes);
   }
 }
