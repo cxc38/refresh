@@ -10,6 +10,7 @@
     "/content/refresh/redirects:/redirects.json",
     "/content/refresh/us/es/configuration:/usesconfig.json",
     "/content/refresh/placeholders:/placeholders.json",
+    "/content/refresh/draft/:/draft/",
     "/content/dam/refresh/:/refresh/"
   ],
   "includes": ["/content/refresh", "/content/dam/refresh"]
