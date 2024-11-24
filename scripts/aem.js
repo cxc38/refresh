@@ -359,7 +359,7 @@ async function loadSpreadsheet(path, themeName) {
   return null;
 }
 
-export async function loadThemeFromSpreadsheet(path) {
+async function loadThemeFromSpreadsheet(path) {
   const themeName = getMetadata('theme');
   if (themeName) {
     const cssPath = await loadSpreadsheet(path, themeName, 'css');
