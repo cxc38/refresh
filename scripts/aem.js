@@ -336,6 +336,38 @@ function createOptimizedPicture(
 }
 
 /**
+ * Loads theme from the spreadsheet.
+ */
+async function loadSpreadsheet(path, themeName) {
+  if (path && path.startsWith('/')) {
+    const resp = await fetch(path);
+    if (resp.ok) {
+      const { data } = await resp.json();
+      if (!themeName) {
+        return data;
+      }
+      let theTheme = null;
+      for (let i = 0; i < data.length; i += 1) {
+        if (data[i].theme.toLowerCase() === themeName.toLowerCase()) {
+          theTheme = data[i].css;
+          break;
+        }
+      }
+      return theTheme;
+    }
+  }
+  return null;
+}
+
+export async function loadThemeFromSpreadsheet(path) {
+  const themeName = getMetadata('theme');
+  if (themeName) {
+    const cssPath = await loadSpreadsheet(path, themeName, 'css');
+    if (cssPath) loadCSS(cssPath);
+  }
+}
+
+/**
  * Set template (page structure) and theme (page styles).
  */
 function decorateTemplateAndTheme() {
@@ -347,7 +379,10 @@ function decorateTemplateAndTheme() {
   const template = getMetadata('template');
   if (template) addClasses(document.body, template);
   const theme = getMetadata('theme');
-  if (theme) addClasses(document.body, theme);
+  if (theme) {
+    addClasses(document.body, theme);
+    loadThemeFromSpreadsheet('/themes-config.json');
+  }
 }
 
 /**
