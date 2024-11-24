@@ -1,4 +1,9 @@
-export default async function loadConfig(path, keyColumn, valueColumn) {
+import {getMetadata} from "../aem.js";
+
+/**
+ * Loads theme from the spreadsheet.
+ */
+export default async function loadTheme(path, key, valueColumn) {
   if (path && path.startsWith('/')) {
     const resp = await fetch(`${window.hlx.codeBasePath}${path}`);
     if (resp.ok) {
@@ -14,4 +19,12 @@ export default async function loadConfig(path, keyColumn, valueColumn) {
     }
   }
   return null;
+}
+
+export default async function loadThemeFromSpreadsheet(path) {
+  const themeName = getMetadata('theme');
+  if (themeName) {
+    const jsonObject = await loadSpreadsheet(path);
+
+  }
 }
