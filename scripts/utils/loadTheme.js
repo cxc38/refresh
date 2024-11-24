@@ -1,4 +1,4 @@
-import { getMetadata } from '../aem.js';
+import { getMetadata, loadCSS } from '../aem.js';
 
 /**
  * Loads theme from the spreadsheet.
@@ -7,11 +7,11 @@ async function loadSpreadsheet(path, themeName, valueColumn) {
   if (path && path.startsWith('/')) {
     const resp = await fetch(path);
     if (resp.ok) {
-      const jsonArray = await resp.json().data;
+      const { data } = await resp.json();
       if (!themeName) {
-        return jsonArray;
+        return data;
       }
-      jsonArray.forEach((item) => {
+      data.forEach((item) => {
         if (item.theme.toLowerCase() === themeName.toLowerCase()) {
           return item[valueColumn];
         }
@@ -25,7 +25,8 @@ async function loadSpreadsheet(path, themeName, valueColumn) {
 export async function loadThemeFromSpreadsheet(path) {
   const themeName = getMetadata('theme');
   if (themeName) {
-    await loadSpreadsheet(path, themeName, 'css');
+    const cssPath = await loadSpreadsheet(path, themeName, 'css');
+    loadCSS(cssPath);
   }
 }
 
