@@ -5,7 +5,7 @@ import { getMetadata } from '../aem.js';
  */
 async function loadSpreadsheet(path, themeName, valueColumn) {
   if (path && path.startsWith('/')) {
-    const resp = await fetch(`${window.hlx.codeBasePath}${path}`);
+    const resp = await fetch(path);
     if (resp.ok) {
       const jsonArray = await resp.json().data;
       if (!themeName) {
