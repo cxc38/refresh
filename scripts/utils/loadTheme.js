@@ -11,12 +11,12 @@ async function loadSpreadsheet(path, themeName, valueColumn) {
       if (!themeName) {
         return data;
       }
-      data.forEach((item) => {
-        if (item.theme.toLowerCase() === themeName.toLowerCase()) {
-          return item[valueColumn];
+      for (let i = 0; i < data.length; i += 1) {
+        if (data[i].theme.toLowerCase() === themeName.toLowerCase()) {
+          loadCSS(data[i].css);
+          break;
         }
-        return null;
-      });
+      }
     }
   }
   return null;
