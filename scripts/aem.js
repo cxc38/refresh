@@ -9,8 +9,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
 /* eslint-env browser */
+
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
@@ -349,7 +349,7 @@ function decorateTemplateAndTheme() {
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, theme);
 
-  const themeCSS = getMetadata('css');
+  const themeCSS = loadTheme('/themes-config.json', theme, 'css');
   if (themeCSS) loadCSS(themeCSS);
 }
 

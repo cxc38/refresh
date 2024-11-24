@@ -1,30 +1,32 @@
-import {getMetadata} from "../aem.js";
+import { getMetadata } from '../aem.js';
 
 /**
  * Loads theme from the spreadsheet.
  */
-export default async function loadTheme(path, key, valueColumn) {
+async function loadSpreadsheet(path, themeName, valueColumn) {
   if (path && path.startsWith('/')) {
     const resp = await fetch(`${window.hlx.codeBasePath}${path}`);
     if (resp.ok) {
-      const { data } = await resp.json();
-      if (!keyColumn) {
-        return data;
+      const jsonArray = await resp.json().data;
+      if (!themeName) {
+        return jsonArray;
       }
-      return Object.fromEntries(
-        data
-          .filter((row) => row[keyColumn])
-          .map((row) => [row[keyColumn].trim(), valueColumn ? row[valueColumn] : row]),
-      );
+      jsonArray.forEach((item) => {
+        if (item.theme.toLowerCase() === themeName.toLowerCase()) {
+          return item[valueColumn];
+        }
+        return null;
+      });
     }
   }
   return null;
 }
 
-export default async function loadThemeFromSpreadsheet(path) {
+export default async function loadTheme(path) {
   const themeName = getMetadata('theme');
   if (themeName) {
-    const jsonObject = await loadSpreadsheet(path);
-
+    await loadSpreadsheet(path, themeName, 'css');
   }
 }
+
+await loadTheme('/themes-config.json');
