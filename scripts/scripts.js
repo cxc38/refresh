@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import loadTheme from './utils/loadTheme.js';
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -93,6 +95,7 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  loadTheme();
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);

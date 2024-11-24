@@ -22,11 +22,13 @@ async function loadSpreadsheet(path, themeName, valueColumn) {
   return null;
 }
 
-export default async function loadTheme(path) {
+export async function loadThemeFromSpreadsheet(path) {
   const themeName = getMetadata('theme');
   if (themeName) {
     await loadSpreadsheet(path, themeName, 'css');
   }
 }
 
-await loadTheme('/themes-config.json');
+export default async function loadTheme() {
+  await loadThemeFromSpreadsheet('/themes-config.json');
+}

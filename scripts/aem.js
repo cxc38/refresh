@@ -348,9 +348,6 @@ function decorateTemplateAndTheme() {
   if (template) addClasses(document.body, template);
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, theme);
-
-  const themeCSS = loadTheme('/themes-config.json', theme, 'css');
-  if (themeCSS) loadCSS(themeCSS);
 }
 
 /**
