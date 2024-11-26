@@ -33,7 +33,9 @@
       "value": "",
       "label": "AEM Content Picker",
       "valueType": "string",
-      "rootPath": "/content/refresh/fragments"
+      "validation": {
+        "rootPath": "/content/refresh/fragments/"
+      }
     }
   ]
 },
