@@ -3,15 +3,15 @@
     "/content/refresh/uk/en/:/",
     "/content/refresh/us/en/:/us/en/",
     "/content/refresh/us/es/:/us/es/",
+    "/content/refresh/us/es/metadata:/us/es/metadata.json",
     "/content/refresh/us/es/configuration:/us/es/config.json",
     "/content/refresh/configuration:/.helix/config.json",
     "/content/refresh/metadata:/metadata.json",
     "/content/refresh/themes-config:/themes-config.json",
-    "/content/refresh/us/es/metadata:/us/es/metadata.json",
     "/content/refresh/redirects:/redirects.json",
-    "/content/refresh/us/es/configuration:/usesconfig.json",
     "/content/refresh/placeholders:/placeholders.json",
     "/content/refresh/draft/:/draft/",
+    "/content/refresh/fragments/:/fragments/",
     "/content/dam/refresh/:/refresh/"
   ],
   "includes": ["/content/refresh", "/content/dam/refresh"]
