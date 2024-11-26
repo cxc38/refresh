@@ -20,7 +20,10 @@
         "name": "picker",
         "label": "Content Fragment Picker",
         "valueType": "string",
-        "variationName": "contentFragmentVariation"
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/refresh/fragments/"
+        }
       }
     ]
   },
@@ -33,7 +36,9 @@
       "value": "",
       "label": "AEM Content Picker",
       "valueType": "string",
-      "rootPath": "/content/refresh/fragments/"
+      "validation": {
+        "rootPath": "/content/refresh/fragments/"
+      }
     }
   ]
 },
