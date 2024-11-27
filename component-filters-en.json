@@ -6,13 +6,6 @@
     ]
   },
   {
-    "id": "EMEA",
-    "components": [
-      "text",
-      "image"
-    ]
-  },
-  {
     "id": "section",
     "components": [
       "text",
@@ -46,6 +39,7 @@
   {
     "id": "column",
     "components": [
+      "fragment",
       "text",
       "image",
       "button",
