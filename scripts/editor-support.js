@@ -106,10 +106,10 @@ function attachEventListners(main) {
 function loadFilterByPath() {
   const url = window.location;
   console.log(url);
-  const filterName = document.querySelector('script[type="application/vnd.adobe.aue.filter+json"],[src="/content/refresh.resource/component-filters.json"]');
-  console.log(filterName);
+  const scriptTag = document.querySelector('script[src*="component-filters.json"]');
+  console.log(scriptTag);
+  scriptTag.src = 'component-filters-en.json';
 }
 
 attachEventListners(document.querySelector('main'));
 loadFilterByPath();
-
