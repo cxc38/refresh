@@ -359,8 +359,7 @@ async function loadSpreadsheet(path, themeName) {
   return null;
 }
 
-async function loadThemeFromSpreadsheet(path) {
-  const themeName = getMetadata('theme');
+async function loadThemeFromSpreadsheet(path, themeName) {
   if (themeName) {
     const cssPath = await loadSpreadsheet(path, themeName, 'css');
     if (cssPath) loadCSS(cssPath);
@@ -370,7 +369,7 @@ async function loadThemeFromSpreadsheet(path) {
 /**
  * Set template (page structure) and theme (page styles).
  */
-function decorateTemplateAndTheme() {
+async function decorateTemplateAndTheme() {
   const addClasses = (element, classes) => {
     classes.split(',').forEach((c) => {
       element.classList.add(toClassName(c.trim()));
@@ -381,7 +380,7 @@ function decorateTemplateAndTheme() {
   const theme = getMetadata('theme');
   if (theme) {
     addClasses(document.body, theme);
-    loadThemeFromSpreadsheet('/themes-config.json');
+    loadThemeFromSpreadsheet('/themes-config.json', theme);
   }
 }
 
