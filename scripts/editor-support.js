@@ -105,7 +105,7 @@ function attachEventListners(main) {
 
 function loadFilterByPath() {
   const url = window.location;
-  console.log(url);
+  console.log(url.href);
   const oldScript = document.querySelector('script[src*="component-filters.json"]');
   const lastSlashIndex = oldScript.src.lastIndexOf('/');
   const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}component-filters-en.json`;

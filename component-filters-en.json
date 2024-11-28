@@ -39,7 +39,7 @@
   {
     "id": "column",
     "components": [
-      "fragment",
+      "aem-content-picker",
       "text",
       "image",
       "button",
