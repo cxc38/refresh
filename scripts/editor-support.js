@@ -103,12 +103,16 @@ function attachEventListners(main) {
   }));
 }
 
+function getFilterJson() {
+  return 'component-filters-en.json';
+}
+
 function loadFilterByPath() {
-  const url = window.location;
-  console.log(url.href);
+  const currentFilterJson = getFilterJson();
+  console.log(currentFilterJson);
   const oldScript = document.querySelector('script[src*="component-filters.json"]');
   const lastSlashIndex = oldScript.src.lastIndexOf('/');
-  const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}component-filters-en.json`;
+  const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
   const newScript = document.createElement('script');
   newScript.src = newSrc;
   newScript.type = oldScript.type;
