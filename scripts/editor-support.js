@@ -114,7 +114,7 @@ function loadFilterByPath() {
   const currentFilterJson = getFilterJson();
   console.log(currentFilterJson);
   if (currentFilterJson) {
-    const oldScript = document.querySelector('script[src*="component-filters.json"]');
+    const oldScript = document.querySelector('script[src*="/component-filters"]');
     const lastSlashIndex = oldScript.src.lastIndexOf('/');
     const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
     const newScript = document.createElement('script');
