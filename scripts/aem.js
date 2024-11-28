@@ -338,7 +338,7 @@ function createOptimizedPicture(
 /**
  * Loads theme from the spreadsheet.
  */
-async function loadSpreadsheet(path, themeName) {
+export async function loadSpreadsheet(path, themeName) {
   if (path && path.startsWith('/')) {
     const resp = await fetch(path);
     if (resp.ok) {
@@ -346,22 +346,32 @@ async function loadSpreadsheet(path, themeName) {
       if (!themeName) {
         return data;
       }
-      let theTheme = null;
+      let retData = null;
       for (let i = 0; i < data.length; i += 1) {
         if (data[i].theme.toLowerCase() === themeName.toLowerCase()) {
-          theTheme = data[i].css;
+          retData = data[i];
           break;
         }
       }
-      return theTheme;
+      return retData;
     }
   }
   return null;
 }
 
-async function loadThemeFromSpreadsheet(path, themeName) {
+export async function loadCssFromSpreadsheet(path, themeName) {
+  const data = loadSpreadsheet(path, themeName);
+  return data.css;
+}
+
+export async function loadFilterFromSpreadsheet(path, themeName) {
+  const data = loadSpreadsheet(path, themeName);
+  return data.filter;
+}
+
+export async function loadThemeFromSpreadsheet(path, themeName) {
   if (themeName) {
-    const cssPath = await loadSpreadsheet(path, themeName, 'css');
+    const cssPath = await loadCssFromSpreadsheet(path, themeName);
     if (cssPath) loadCSS(cssPath);
   }
 }

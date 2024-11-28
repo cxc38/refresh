@@ -3,9 +3,10 @@ import {
   decorateBlocks,
   decorateButtons,
   decorateIcons,
-  decorateSections,
+  decorateSections, getMetadata,
   loadBlock,
   loadSections,
+  loadFilterFromSpreadsheet,
 } from './aem.js';
 import { decorateRichtext } from './editor-support-rte.js';
 import { decorateMain } from './scripts.js';
@@ -103,8 +104,10 @@ function attachEventListners(main) {
   }));
 }
 
-function getFilterJson() {
-  return 'component-filters-en.json';
+async function getFilterJson() {
+  const themeName = getMetadata('theme');
+  const newFilterJson = await loadFilterFromSpreadsheet('/themes-config.json', themeName);
+  return newFilterJson;
 }
 
 function loadFilterByPath() {
