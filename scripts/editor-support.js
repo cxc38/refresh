@@ -104,7 +104,7 @@ function attachEventListners(main) {
 }
 
 function getFilterJson() {
-  return 'component-filters.json';
+  return 'component-filters-en.json';
 }
 
 function loadFilterByPath() {
