@@ -104,20 +104,22 @@ function attachEventListners(main) {
 }
 
 function getFilterJson() {
-  return 'component-filters-en.json';
+  return 'component-filters.json';
 }
 
 function loadFilterByPath() {
   const currentFilterJson = getFilterJson();
   console.log(currentFilterJson);
-  const oldScript = document.querySelector('script[src*="component-filters.json"]');
-  const lastSlashIndex = oldScript.src.lastIndexOf('/');
-  const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
-  const newScript = document.createElement('script');
-  newScript.src = newSrc;
-  newScript.type = oldScript.type;
-  oldScript.parentNode.replaceChild(newScript, oldScript); // Replace the script
-  console.log(newScript);
+  if (currentFilterJson) {
+    const oldScript = document.querySelector('script[src*="component-filters.json"]');
+    const lastSlashIndex = oldScript.src.lastIndexOf('/');
+    const newSrc = `${oldScript.src.substring(0, lastSlashIndex + 1)}${currentFilterJson}`;
+    const newScript = document.createElement('script');
+    newScript.src = newSrc;
+    newScript.type = oldScript.type;
+    oldScript.parentNode.replaceChild(newScript, oldScript); // Replace the script
+    console.log(newScript);
+  }
 }
 
 attachEventListners(document.querySelector('main'));
