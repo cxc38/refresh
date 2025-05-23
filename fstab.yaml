@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p134211-e1317444.adobeaemcloud.com/bin/franklin.delivery/cxc38/refresh/main"
+    url: "https://author-p156143-e1656660.adobeaemcloud.com/bin/franklin.delivery/cxc38/refresh/main"
     type: "markup"
     suffix: ".html"
