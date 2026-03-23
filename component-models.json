@@ -73,7 +73,7 @@
     "fields": [
       {
         "component": "boolean",
-        "label": "Shall the container field be revealed?",
+        "label": "Shall the container with text fields be revealed?",
         "name": "reveal",
         "valueType": "boolean"
       },
