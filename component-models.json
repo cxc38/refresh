@@ -41,7 +41,7 @@
       }
     }
   ]
-},
+  },
   {
     "id": "container",
     "fields": [
@@ -73,7 +73,7 @@
     "fields": [
       {
         "component": "boolean",
-        "label": "Shall the text field be revealed?",
+        "label": "Shall the container field be revealed?",
         "name": "reveal",
         "valueType": "boolean"
       },
