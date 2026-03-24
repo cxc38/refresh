@@ -21,6 +21,7 @@
       "experience-fragment",
       "aem-content-picker",
       "aem-content-fragment",
+      "multifield-container-component",
       "conditionally-revealed-component"
     ]
   },
