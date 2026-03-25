@@ -126,12 +126,6 @@
         "label": "theImage-1 URL",
         "multi": false,
         "condition": { "===": [{"var" : "reveal"}, false] }
-      },
-      {
-        "component": "text",
-        "name": "theImage1Alt",
-        "label": "theImage-1 Alt Text",
-        "condition": { "===": [{"var" : "reveal"}, false] }
       }
     ]
   },
