@@ -56,7 +56,7 @@
         "label": "Container",
         "name": "container",
         "valueType": "string",
-        "collapsible": false,
+        "collapsible": true,
         "multi": true,
         "fields": [
           {
