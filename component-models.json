@@ -64,6 +64,12 @@
             "label": "Text 1",
             "name": "text",
             "valueType": "string"
+          },
+          {
+            "component": "text-input",
+            "label": "Text 2",
+            "name": "text2",
+            "valueType": "string"
           }
         ]
       },
