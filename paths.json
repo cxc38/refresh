@@ -10,5 +10,5 @@
     "/content/refresh/fragments/:/fragments/",
     "/content/dam/refresh/:/refresh/"
   ],
-  "includes": ["/content", "/conf"]
+  "includes": ["/content/refresh", "/conf/refresh", "/content/dam/refresh"]
 }
