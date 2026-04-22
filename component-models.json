@@ -76,11 +76,48 @@
     ]
   },
   {
+    "id": "multifield-container-component",
+    "fields": [
+      {
+        "component": "text",
+        "label": "Top of the Container",
+        "name": "top-text-1",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "Container",
+        "name": "container",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text-input",
+            "label": "Simple Text 1",
+            "name": "text",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "theImage1",
+            "label": "theImage-1",
+            "multi": false
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "label": "Bottom of the Container",
+        "name": "bottom-text-1",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "conditionally-revealed-component",
     "fields": [
       {
         "component": "boolean",
-        "label": "Shall the container field be revealed?",
+        "label": "Show the container with text fields",
         "name": "reveal",
         "valueType": "boolean"
       },
